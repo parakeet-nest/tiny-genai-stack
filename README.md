@@ -7,7 +7,7 @@ This 🐳 Compose GenAI Stack is an example of the usage of the [Parakeet](https
 If you want to use the stack with your local install of Ollama:
 
 ```bash
-HTTP_PORT=9999 LLM=tinyllama OLLAMA_BASE_URL=http://host.docker.internal:11434 docker compose --profile webapp up
+HTTP_PORT=9999 LLM=tinydolphin OLLAMA_BASE_URL=http://host.docker.internal:11434 docker compose --profile webapp up
 ```
 > Make sure that Ollama is started
 
