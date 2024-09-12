@@ -21,3 +21,20 @@ HTTP_PORT=8888 LLM=gemma:2b OLLAMA_BASE_URL=http://ollama:11434 docker compose -
 ## Remarks
 
 If you have a GPU on your workstation, you can turn on GPU access with Docker Compose: https://docs.docker.com/compose/gpu-support. With Mac M1, M2 and M3 use the local install of Ollama.
+
+## Install dependencies (front)
+
+**JavaScript**:
+```bash
+cd public/js
+wget https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js
+wget https://cdn.jsdelivr.net/npm/beercss@3.7.8/dist/cdn/beer.min.js
+wget https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js
+wget https://unpkg.com/htmx.org@2.0.2/dist/htmx.min.js
+```
+
+**Css**:
+```bash
+cd public/css
+wget https://cdn.jsdelivr.net/npm/beercss@3.7.8/dist/cdn/beer.min.css
+```

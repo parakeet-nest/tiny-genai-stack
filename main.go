@@ -51,6 +51,10 @@ func main() {
 	shouldIStopTheCompletion := false
 	var conversationalContext []int
 
+	mux.HandleFunc("GET /model", func(response http.ResponseWriter, request *http.Request) {
+		response.Write([]byte("🤖 LLM: " + model))
+	})
+
 	// Cancel/Stop the generation of the completion
 	mux.HandleFunc("DELETE /cancel-request", func(response http.ResponseWriter, request *http.Request) {
 		shouldIStopTheCompletion = true
