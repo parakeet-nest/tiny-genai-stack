@@ -71,12 +71,13 @@
         <h5 class="max center-align">🩵 GoLang 🐳 Docker 🦙 GenAI Stack 🦜🪺</h5>
 
         <fieldset>
+
             <legend 
                 hx-get="/model" 
                 hx-trigger="load"
-                hx-target="#model"
-            >
-            Demo with <span id="model"></span></legend>
+                hx-target="#model">
+                Demo with <span id="model"></span>
+            </legend>
 
             <div id="prompt-form" class="field border label textarea">
               <textarea id="human-message">
@@ -102,7 +103,7 @@
                 </button>
             </div>
 
-          </fieldset>
+        </fieldset>
 
           <div class="field border label">
             <div id="txt-response">
