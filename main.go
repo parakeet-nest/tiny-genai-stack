@@ -80,7 +80,7 @@ func main() {
 
 		questionFromWebApp := data["question"]
 
-		query := llm.Query{
+		query := llm.GenQuery{
 			Model:   model,
 			Prompt:  questionFromWebApp,
 			Options: options,
@@ -88,7 +88,7 @@ func main() {
 		}
 
 		answer, err := completion.GenerateStream(ollamaUrl, query,
-			func(answer llm.Answer) error {
+			func(answer llm.GenAnswer) error {
 				log.Println("📝:", answer.Response)
 				response.Write([]byte(answer.Response))
 				flusher.Flush()
@@ -101,7 +101,7 @@ func main() {
 
 		if err != nil {
 			shouldIStopTheCompletion = false
-			response.Write([]byte("bye: "+err.Error()))
+			response.Write([]byte("bye: " + err.Error()))
 		}
 		// keep the las context
 		conversationalContext = answer.Context

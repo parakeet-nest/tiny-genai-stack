@@ -1,4 +1,4 @@
-FROM golang:1.22.1-alpine as buildernext
+FROM golang:1.23.2-alpine AS buildernext
 WORKDIR /app
 COPY main.go .
 COPY go.mod .
